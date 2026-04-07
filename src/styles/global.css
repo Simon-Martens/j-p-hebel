@@ -39,4 +39,122 @@
 @theme {
   --font-serif: "Crimson Pro", serif;
   --font-sans: "Source Sans 3", sans-serif;
+  --color-main: #1f365c;
+}
+
+@layer utilities {
+  .color-main {
+    color: var(--color-main);
+  }
+
+  .text-logo {
+    @apply text-4xl leading-none;
+    color: var(--color-main);
+
+    @variant sm {
+      @apply text-5xl;
+    }
+
+    @variant md {
+      @apply text-6xl;
+    }
+
+    @variant lg {
+      @apply text-7xl;
+    }
+
+    @variant xl {
+      @apply text-[5.25rem];
+    }
+
+    @variant 2xl {
+      @apply text-8xl;
+    }
+  }
+
+  .text-logo-sub {
+    @apply text-base;
+    color: var(--color-main);
+
+    @variant sm {
+      @apply text-lg;
+    }
+
+    @variant md {
+      @apply text-xl;
+    }
+
+    @variant lg {
+      @apply text-2xl;
+    }
+
+    @variant xl {
+      @apply text-3xl;
+    }
+  }
+
+  .text-fluid-link {
+    @apply text-xl leading-snug;
+
+    @variant sm {
+      @apply text-2xl;
+    }
+
+    @variant lg {
+      @apply text-[1.75rem];
+    }
+
+    @variant xl {
+      @apply text-3xl;
+    }
+  }
+}
+
+@layer components {
+  header h1 {
+    @apply text-4xl;
+    color: var(--color-main);
+    line-height: 0.94;
+
+    @variant sm {
+      @apply text-5xl;
+    }
+
+    @variant md {
+      @apply text-6xl;
+    }
+
+    @variant lg {
+      @apply text-7xl;
+    }
+
+    @variant xl {
+      @apply text-[5.25rem];
+    }
+
+    @variant 2xl {
+      @apply text-8xl;
+    }
+  }
+
+  header h2 {
+    @apply text-base;
+    line-height: 1.15;
+
+    @variant sm {
+      @apply text-lg;
+    }
+
+    @variant md {
+      @apply text-xl;
+    }
+
+    @variant lg {
+      @apply text-[1.35rem];
+    }
+
+    @variant xl {
+      @apply text-2xl;
+    }
+  }
 }
