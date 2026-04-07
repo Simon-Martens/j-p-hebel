@@ -291,7 +291,7 @@
   }
 
   .edition-entry-title {
-    @apply text-main text-2xl leading-[1.3]; 
+    @apply text-main text-xl leading-[1.3] mb-1.5; 
   }
 
   .edition-entry-meta {

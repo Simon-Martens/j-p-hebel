@@ -126,9 +126,13 @@ const vortraege = [
         class="absolute inset-0 h-full w-full object-cover"
       />
       <div class="absolute inset-0 bg-paper/35"></div>
-			<div class="mx-12 flex flex-col md:flex-row gap-x-12 relative max-w-5xl mx-auto md:items-start">
+			<div class="mx-12 flex flex-col lg:flex-row gap-x-12 relative max-w-5xl mx-auto lg:items-start">
+					<div class="lg:hidden relative md:-right-24 w-fit text-paper bg-slate-900 text-3xl p-7 font-serif text-center">
+						<p>17./18. September 2026
+						<p>Badische Landesbibliothek Karlstuhe
+					</div>
 
-				<div class="bg-paper p-4 md:w-[50%] grow-0 shrink-0 mt-18">
+				<div class="bg-paper p-4 lg:w-[50%] grow-0 shrink-0 mt-18">
 					<div class="text-2xl text-accent font-serif text-center mb-4">
 						{vortraege[0].date}
 					</div>
@@ -151,13 +155,13 @@ const vortraege = [
 					</div>
 				</div>
 
-				<div class="md:w-[50%] grow-0 shrink-0 mt-8 relative">
-					<div class="relative md:-right-24 w-fit text-paper bg-slate-900 text-3xl p-7 font-serif text-center">
+				<div class="lg:w-[50%] grow-0 shrink-0 mt-8 relative">
+					<div class="hidden lg:block relative xl:-right-24 w-fit text-paper bg-slate-900 text-3xl p-7 font-serif text-center">
 						<p>17./18. September 2026
 						<p>Badische Landesbibliothek Karlstuhe
 					</div>
 
-				<div class="bg-paper p-4 grow-0 shrink-0 mt-18">
+				<div class="bg-paper p-4 grow-0 shrink-0 lg:mt-18 ">
 					<div class="mb-2 text-2xl text-accent font-serif text-center mb-4">
 						{vortraege[1].date}
 					</div>
