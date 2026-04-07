@@ -7,8 +7,10 @@ const { class: className = "" } = Astro.props;
 ---
 
 <div class={`font-serif ${className}`.trim()}>
-  <div class="text-logo">
-    <span>JPH</span><span class="text-accent">A</span>
-  </div>
-  <div class="text-logo-sub -mt-2 text-right text-[#1f365c]">Heidelberg</div>
+	<a href="/">
+		<div class="text-logo text-right">
+			<span>JPH</span><span class="text-accent">A</span>
+		</div>
+		<div class="text-logo-sub -mt-2 text-right text-[#1f365c]">Heidelberg</div>
+	</a>
 </div>

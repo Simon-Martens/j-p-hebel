@@ -86,28 +86,30 @@ const volumes = [
 
 <StartLayout title="Johann Peter Hebel | Sämtliche Schriften">
   <main class="flex min-h-screen flex-col">
-    <section class="edition-page-header px-6 py-5 md:px-10 md:py-8">
-      <div class="edition-page-header-inner mx-auto flex max-w-[1680px] flex-col gap-6 md:flex-row md:items-center md:justify-center md:gap-20">
-        <Logo class="edition-logo-block shrink-0" />
 
-        <div class="">
-          <h1 class="font-serif text-5xl">
+    <header class="shrink-0 px-8 py-4 font-serif">
+      <div class="mb-6 flex w-full flex-col items-center gap-8 lg:gap-12 xl:gap-16 md:mb-6 md:flex-row">
+        <Logo class="shrink-0 flex-col grow-0 w-[30%]" />
+
+        <div class="md:w-full lg:mt-0 flex flex-col text-main grow w-[60%]">
+          <h1 class="font-light mid">
             Johann Peter Hebel
           </h1>
-					<div class="font-sans ml-18 mt-2">
-						<h1 class="text-6xl text-accent">
+					<div class="font-sans md:ml-18 mt-2">
+						<h1 class="mid text-accent">
 							Sämtliche Schriften
 						</h1>
-						<p class="text-logo-sub">
+						<h2 class="text-logo-sub">
 							Historisch-kritische Edition und Kommentar
-						</p>
+						</h2>
 					</div>
-          <p class="text-logo-sub-small font-serif">
+					<div class="mt-1 hidden md:block"> 
             Die Ausgabe ist ein Projekt der Theodor Springmann Stiftung.
-          </p>
+          </div>
         </div>
       </div>
-    </section>
+    </header>
+
 
     <section class="relative overflow-hidden px-4 pb-8 pt-2 md:px-8 md:pb-12 lg:px-14">
       <img
@@ -117,10 +119,10 @@ const volumes = [
       />
       <div class="absolute inset-0 bg-paper/35"></div>
 
-      <div class="relative mx-auto max-w-[1680px]">
+      <div class="relative mx-auto max-w-4xl">
         <article class="edition-overview mx-auto max-w-5xl bg-[#d8d8d8] px-6 py-7 text-[#1f365c] shadow-[0_12px_40px_rgba(0,0,0,0.08)] md:px-10 md:py-10">
           <header class="edition-overview-header">
-            <h2 class="edition-overview-title font-sans">Übersicht</h2>
+            <h2 class="text-accent text-3xl mb-6 font-sans">Übersicht</h2>
           </header>
 
           <div class="edition-overview-body">
