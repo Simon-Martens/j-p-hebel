@@ -1,0 +1,72 @@
+---
+import StartLayout from "../layouts/StartLayout.astro";
+import portrait from "../assets/Hebel-Portrait_Mueller_Ausschnitt.jpg";
+---
+
+<StartLayout title="Johann Peter Hebel-Archiv">
+  <main class="flex min-h-screen flex-col">
+    <header class="mx-auto shrink-0 px-8 py-6 md:px-14 md:py-10 font-serif">
+      <div class="flex flex-col md:flex-row max-w-[1600px] items-center gap-8 md:gap-24">
+        <div class="w-min mx-auto md:w-fit shrink-0 leading-none flex-col">
+          <div class="text-7xl md:text-9xl">
+            <span class="text-[#1f365c]">JPH</span><span class="text-[#b4382f]">A</span>
+          </div>
+          <div class="-mt-2 text-2xl text-[#1f365c] md:text-3xl text-right">Heidelberg</div>
+        </div>
+
+        <div class="flex-col md:w-full mt-3 md:mt-0">
+          <h1 class="text-5xl font-light tracking-tight text-[#1f365c] md:text-8xl">
+            Johann Peter Hebel-Archiv
+          </h1>
+          <p class="mt-3 text-lg text-slate-700 md:text-2xl">
+            Das Archiv ist ein Projekt der Theodor Springmann Stiftung.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="grow">
+      <img
+        src={portrait.src}
+        alt="Ausschnitt eines Porträts von Johann Peter Hebel"
+        class="h-full w-full object-cover"
+      />
+    </section>
+
+    <section class="shrink-0">
+      <div class="px-8 py-8 md:px-14 md:py-10">
+        <div class="mx-auto flex w-full max-w-7xl flex-col gap-8 text-center md:flex-row md:justify-between md:gap-12">
+          <a href="/edition" class="block flex-1 leading-snug hover:underline">
+            <span class="text-2xl text-[#1f365c] md:text-3xl">
+              Historisch-kritische Edition<br />
+              sämtlicher Schriften
+            </span>
+          </a>
+
+          <a href="/tagung" class="block flex-1 leading-snug hover:underline">
+            <span class="text-2xl text-[#b4382f] md:text-3xl">Tagung</span><br />
+            <span class="text-2xl text-[#1f365c] md:text-3xl">
+              »Neue Zugänge zu Hebels Briefwerk«
+            </span>
+          </a>
+
+          <a href="/ausstellung" class="block flex-1 leading-snug hover:underline">
+            <span class="text-2xl text-[#b4382f] md:text-3xl">Virtuelle Ausstellung</span><br />
+            <span class="text-2xl text-[#1f365c] md:text-3xl">
+              »Das Nachleben der Worte«
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <footer class="border-t border-black/10 px-6 py-4 text-center text-sm text-slate-700">
+        © Theodor Springmann Stiftung |
+        Stand vom 1.4.2026 |
+        <a href="/impressum" class="hover:underline">Impressum</a> ·
+        <a href="/kontakt" class="hover:underline">Kontakt</a> ·
+        <a href="/datenschutz" class="hover:underline">Datenschutzerklärung</a> ·
+        <a href="/admin" class="hover:underline">Admin-Bereich</a>
+      </footer>
+    </section>
+  </main>
+</StartLayout>
