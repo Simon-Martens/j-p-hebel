@@ -1,6 +1,7 @@
 ---
 import StartLayout from "../layouts/StartLayout.astro";
 import Footer from "../components/Footer.astro";
+import Logo from "../components/Logo.astro";
 import portrait from "../assets/Hebel-Portrait_Mueller_Ausschnitt.jpg";
 ---
 
@@ -8,12 +9,7 @@ import portrait from "../assets/Hebel-Portrait_Mueller_Ausschnitt.jpg";
   <main class="flex min-h-screen flex-col">
     <header class="mx-auto shrink-0 px-8 py-4 font-serif">
       <div class="mb-6 flex max-w-[1680px] flex-col items-center gap-8 md:mb-10 md:flex-row md:gap-24">
-        <div class="w-min mx-auto md:w-fit shrink-0 flex-col">
-					<div class="text-logo">
-            <span class="">JPH</span><span class="text-[#b4382f]">A</span>
-          </div>
-          <div class="text-logo-sub -mt-2 text-[#1f365c] text-right">Heidelberg</div>
-        </div>
+        <Logo class="w-min mx-auto md:w-fit shrink-0 flex-col" />
 
         <div class="w-full md:hidden">
           <img
@@ -61,14 +57,14 @@ import portrait from "../assets/Hebel-Portrait_Mueller_Ausschnitt.jpg";
           </a>
 
           <a href="/tagung" class="block flex-1 hover:underline">
-            <span class="text-fluid-link text-[#b4382f]">Tagung</span><br />
+            <span class="text-fluid-link text-accent">Tagung</span><br />
             <span class="text-fluid-link text-[#1f365c]">
               »Neue Zugänge zu Hebels Briefwerk«
             </span>
           </a>
 
           <a href="/ausstellung" class="block flex-1 hover:underline">
-            <span class="text-fluid-link text-[#b4382f]">Virtuelle Ausstellung</span><br />
+            <span class="text-fluid-link text-accent">Virtuelle Ausstellung</span><br />
             <span class="text-fluid-link text-[#1f365c]">
               »Das Nachleben der Worte«
             </span>

@@ -40,6 +40,14 @@
   --font-serif: "Crimson Pro", serif;
   --font-sans: "Source Sans 3", sans-serif;
   --color-main: #1f365c;
+  --color-paper: #e7e4c8;
+  --color-accent: #b4382f;
+}
+
+@layer base {
+  html {
+    font-size: clamp(18px, 0.35vw + 16px, 22px);
+  }
 }
 
 @layer utilities {
@@ -90,6 +98,23 @@
 
     @variant xl {
       @apply text-3xl;
+    }
+  }
+
+  .text-logo-sub-small {
+    @apply text-base;
+    color: var(--color-main);
+
+    @variant md {
+      @apply text-base;
+    }
+
+    @variant lg {
+      @apply text-lg;
+    }
+
+    @variant xl {
+      @apply text-xl;
     }
   }
 
@@ -157,4 +182,74 @@
       @apply text-2xl;
     }
   }
+
+  .edition-title-block {
+    @apply max-w-[33rem] font-serif text-center md:text-left;
+  }
+
+  .edition-kicker {
+    @apply text-main text-[1.85rem] md:text-[3rem];
+  }
+
+  .edition-page-title {
+    @apply mt-[0.35rem] text-accent md:text-[3.45rem];
+  }
+
+  .edition-page-subtitle {
+    @apply mt-[0.15rem] text-main leading-[1.08] md:text-[1.45rem];
+  }
+
+  .edition-project-note {
+    @apply mt-[0.95rem] text-slate-700 leading-[1.22] md:text-[1.2rem];
+  }
+
+  .edition-overview {
+    @apply font-serif md:max-w-[52rem];
+  }
+
+  .edition-overview-header {
+    @apply mb-[1.1rem];
+  }
+
+  .edition-overview-title {
+    @apply text-accent text-[2rem] leading-none md:text-[2.6rem];
+  }
+
+  .edition-overview-body {
+    @apply text-[1rem] leading-[1.2] text-slate-600 md:text-[1.05rem];
+  }
+
+  .edition-entry + .edition-entry {
+    @apply mt-[1.15rem];
+  }
+
+  .edition-entry-title {
+    @apply text-main text-2xl leading-[1.15]; 
+  }
+
+  .edition-entry-meta {
+		@apply ml-3;
+  }
+
+  .edition-entry p,
+  .edition-entry h3 {
+    @apply m-0;
+  }
+
+  .edition-page-header-inner {
+    @apply md:min-h-[10.9rem];
+  }
+
+  .edition-logo-block {
+    @apply md:-translate-y-[0.1rem];
+  }
+
+  .edition-logo-block .text-logo {
+    @apply md:text-[4rem] md:leading-[0.9];
+  }
+
+  .edition-logo-block .text-logo-sub {
+    @apply md:mt-[-0.1rem] md:text-[1rem] md:leading-none;
+  }
+
 }
