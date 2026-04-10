@@ -63,71 +63,8 @@
     color: var(--color-main);
   }
 
-  .text-logo {
-    @apply text-6xl leading-none;
-    color: var(--color-main);
-
-    @variant sm {
-      @apply text-5xl;
-    }
-
-    @variant md {
-      @apply text-6xl;
-    }
-
-    @variant lg {
-      @apply text-7xl;
-    }
-
-    @variant xl {
-      @apply text-[5.25rem];
-    }
-
-    @variant 2xl {
-      @apply text-8xl;
-    }
-  }
-
-  .text-logo-sub {
-    @apply text-base;
-    color: var(--color-main);
-
-    @variant sm {
-      @apply text-xl;
-    }
-
-    @variant md {
-      @apply text-xl;
-    }
-
-    @variant lg {
-      @apply text-2xl;
-    }
-
-    @variant xl {
-      @apply text-3xl;
-    }
-  }
-
-  .text-logo-sub-small {
-    @apply text-base;
-    color: var(--color-main);
-
-    @variant md {
-      @apply text-base;
-    }
-
-    @variant lg {
-      @apply text-lg;
-    }
-
-    @variant xl {
-      @apply text-xl;
-    }
-  }
-
   .text-fluid-link {
-    @apply text-xl leading-snug;
+    @apply text-xl;
 
     @variant sm {
       @apply text-xl;
@@ -153,7 +90,6 @@
   h1.huge {
     @apply text-2xl;
     color: var(--color-main);
-    line-height: 0.94;
 
     @variant sm {
       @apply text-3xl;
@@ -178,7 +114,6 @@
 
   h2.huge {
     @apply text-base;
-    line-height: 1.15;
 
     @variant sm {
       @apply text-lg;
@@ -263,11 +198,11 @@
   }
 
   .edition-page-subtitle {
-    @apply mt-[0.15rem] text-main leading-[1.08] md:text-[1.45rem];
+    @apply mt-[0.15rem] text-main md:text-[1.45rem];
   }
 
   .edition-project-note {
-    @apply mt-[0.95rem] text-slate-700 leading-[1.22] md:text-[1.2rem];
+    @apply mt-[0.95rem] text-slate-700 md:text-[1.2rem];
   }
 
   .edition-overview {
@@ -279,11 +214,11 @@
   }
 
   .edition-overview-title {
-    @apply text-accent text-[2rem] leading-none md:text-[2.6rem];
+    @apply text-accent text-[2rem] md:text-[2.6rem];
   }
 
   .edition-overview-body {
-    @apply text-[1rem] leading-[1.2] text-slate-600 md:text-[1.05rem];
+    @apply text-[1rem] text-slate-600 md:text-[1.05rem];
   }
 
   .edition-entry + .edition-entry {
@@ -291,7 +226,7 @@
   }
 
   .edition-entry-title {
-    @apply text-main text-xl leading-[1.3] mb-1.5; 
+    @apply text-main text-xl mb-1.5 hyphens-auto; 
   }
 
   .edition-entry-meta {
@@ -299,27 +234,15 @@
   }
 
 	.edition-entry-desc {
-		@apply xl:text-lg max-w-[68ch] hyphens-auto leading-tight;
+		@apply xl:text-lg max-w-[68ch] hyphens-auto;
 	}
 
   .edition-entry p {
-    @apply m-0;
+    @apply m-0 hyphens-auto;
   }
 
   .edition-page-header-inner {
     @apply md:min-h-[10.9rem];
-  }
-
-  .edition-logo-block {
-    @apply md:-translate-y-[0.1rem];
-  }
-
-  .edition-logo-block .text-logo {
-    @apply md:text-[4rem] md:leading-[0.9];
-  }
-
-  .edition-logo-block .text-logo-sub {
-    @apply md:mt-[-0.1rem] md:text-[1rem] md:leading-none;
   }
 
 }

@@ -8,7 +8,7 @@ const volumes = [
   {
     band: "I",
     title: "Gedichte",
-    pages: "Ca. 350 Seiten",
+    pages: "Ca. 350\u00A0Seiten",
     lines: [
       "Alemannische Gedichte. Hochdeutsche Dichtungen. Rätsel.",
       "(erscheint voraussichtlich 2027)",
@@ -17,7 +17,7 @@ const volumes = [
   {
     band: "II/III",
     title: "Erzählungen und Aufsätze",
-    pages: "660 S.",
+		pages: "660\u00A0Seiten",
     lines: [
       "Die Kalenderbeiträge des rheinländischen Hausfreundes. Sonstige Prosa. (Mit den Holzstichen der Kalender)",
       "Herausgegeben von Adrian Braunbehrens und Peter Pfaff unter Mitwirkung von Bernhard Oswald",
@@ -27,7 +27,7 @@ const volumes = [
   {
     band: "IV",
     title: "Apparat zu den Bänden I-III",
-    pages: "Ca. 350 Seiten",
+    pages: "Ca. 350\u00A0Seiten",
     lines: [
       "Das Verfahren der Edition. Textgeschichte. Die Varianten in den Handschriften und autorisierten Drucken.",
       "(erscheint voraussichtlich 2027)",
@@ -36,7 +36,7 @@ const volumes = [
   {
     band: "V",
     title: "Biblische Geschichten",
-    pages: "318 S.",
+		pages: "318\u00A0Seiten",
     lines: [
       "Biblische Geschichten, Text- und Druckgeschichte, Textvarianten",
       "Herausgegeben von Gustav Adolf Benrath und Adrian Braunbehrens unter Mitwirkung von Gerd Müller",
@@ -46,7 +46,7 @@ const volumes = [
   {
     band: "VI/VII",
     title: "Predigten und Predigtentwürfe",
-    pages: "850 S.",
+		pages: "850\u00A0Seiten",
     lines: [
       "Predigten und Predigtentwürfe, Text- und Druckgeschichte, Textvarianten, Dokumentation, Register",
       "Herausgegeben von Johann Anselm Steiger und Mitwirkung von Thomas Illig",
@@ -56,7 +56,7 @@ const volumes = [
   {
     band: "VIII",
     title: "Theologische Schriften",
-    pages: "388 S.",
+		pages: "388\u00A0Seiten",
     lines: [
       "Katechismus, Beiträge zur Liturgie und Religionswissenschaft, Text- und Druckgeschichte, Textvarianten, Dokumentation, Register",
       "Herausgegeben von Johann Anselm Steiger und Mitwirkung von Thomas Illig",
@@ -66,18 +66,18 @@ const volumes = [
   {
     band: "IX/X",
     title: "Amtschriften und nachgelassene Aufzeichnungen",
-    pages: "Ca. 500 Seiten",
+    pages: "Ca. 500\u00A0Seiten",
     lines: [
-      "Gutachten und Amtschriften. Auszüge aus Büchern und Zeitschriften. Entwürfe für den Unterricht. Gedanken, Einfälle und Träume. Ca. 500 Seiten",
+      "Gutachten und Amtschriften. Auszüge aus Büchern und Zeitschriften. Entwürfe für den Unterricht. Gedanken, Einfälle und Träume. Ca. 500\u00A0Seiten",
       "(in Vorbereitung)",
     ],
   },
   {
     band: "X–XII",
     title: "Hebels Briefe",
-    pages: "Ca. 1000 Seiten",
+    pages: "Ca. 1000\u00A0Seiten",
     lines: [
-      "Briefe, Textvarianten, Register. Ca. 1000 Seiten",
+      "Briefe, Textvarianten, Register. Ca. 1000\u00A0Seiten",
       "(in Vorbereitung)",
     ],
   },
@@ -89,9 +89,11 @@ const volumes = [
 
     <header class="shrink-0 px-8 py-4 font-serif">
       <div class="mb-6 flex w-full flex-col items-center gap-8 lg:gap-12 xl:gap-16 md:mb-6 md:flex-row">
-        <Logo class="shrink-0 flex-col grow-0 w-[30%]" />
+				<div class="md:w-[30%] shrink-0 grow-0 flex md:justify-end mx-auto md:mx-0">
+        	<Logo class="" />
+				</div>
 
-        <div class="md:w-full lg:mt-0 flex flex-col text-main grow w-[60%]">
+        <div class="md:w-full lg:mt-0 flex flex-col text-main grow md:w-[60%]">
           <h1 class="font-light mid">
             Johann Peter Hebel
           </h1>
@@ -99,7 +101,7 @@ const volumes = [
 						<h1 class="mid text-accent">
 							Sämtliche Schriften
 						</h1>
-						<h2 class="text-logo-sub">
+						<h2 class="text-base text-main sm:text-xl md:text-xl lg:text-2xl xl:text-3xl">
 							Historisch-kritische Edition und Kommentar
 						</h2>
 					</div>
@@ -111,7 +113,7 @@ const volumes = [
     </header>
 
 
-    <section class="relative overflow-hidden px-4 pb-8 pt-2 md:px-8 md:pb-12 lg:px-14">
+    <section class="relative overflow-hidden px-4 pb-8 pt-4 md:px-8 md:pb-12 lg:px-14">
       <img
         src={manuscript.src}
         alt="Ausschnitt aus einer Hebel-Handschrift"
@@ -128,7 +130,7 @@ const volumes = [
           <div class="edition-overview-body">
             <section class="edition-entry">
               <h3 class="edition-entry-title">
-                Vorstudie zur Historisch-Kritischen Gesamtausgabe. 84 S.
+								Vorstudie zur Historisch-Kritischen Gesamtausgabe. 84{"\u00A0"}S.
               </h3>
 							<div class="edition-entry-desc">
               <p>

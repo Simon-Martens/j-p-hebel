@@ -1,0 +1,71 @@
+---
+import StartLayout from "../layouts/StartLayout.astro";
+import cover from "../assets/biblische_geschichten_cover.jpg";
+---
+
+<StartLayout title="Johann Peter Hebel | Das Nachleben der Worte">
+  <main class="flex min-h-screen flex-col bg-[#efe9c2]">
+    <header class="shrink-0 px-8 py-4 font-serif">
+      <div class="mb-6 flex-col mx-auto flex-col items-center gap-8 lg:gap-12 xl:gap-16 md:mb-6 md:flex-row">
+        <h1 class="font-light sm text-center text-accent">
+          Ausstellung
+        </h1>
+
+        <div class="mt-4">
+          <h1 class="sm text-center">
+            Johann Peter Hebel<br>
+            Das Nachleben der Worte
+          </h1>
+        </div>
+      </div>
+    </header>
+
+    <section class="relative isolate min-h-[34rem] flex-1 overflow-hidden bg-[#a6c7ad] px-4 py-4 md:min-h-[42rem] md:px-0 md:py-0">
+      <img
+        src={cover.src}
+        alt="Biblische Geschichten, Coverdetail mit lesendem Engel"
+        class="absolute inset-0 h-full w-full object-cover object-center brightness-[1.02] saturate-[0.9]"
+      />
+
+      <div class="relative z-10 flex min-h-[calc(34rem-2rem)] flex-col justify-between md:min-h-[42rem]">
+        <div class="pt-2 md:pl-8 md:pt-6">
+          <div class="w-fit max-w-[19rem] bg-[#bfd4b2]/90 px-4 py-3 font-serif text-[1.1rem] [1.18] font-semibold text-[#23443d] shadow-[0_6px_18px_rgba(0,0,0,0.08)] md:max-w-[42rem] md:px-5 md:py-4 md:text-[2rem]">
+            <p>Theodor Springmann Stiftung</p>
+            <p>Hebel-Archiv Heidelberg</p>
+            <p>Historisch-kritische Edition sämtlicher Schriften</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4 pb-3 md:flex-row md:items-end md:justify-between md:px-4 md:pb-4">
+          <div class="max-w-[17rem] bg-[#201f1b]/95 px-4 py-4 font-serif text-[1.1rem] text-[#efe5ba] shadow-[0_16px_30px_rgba(0,0,0,0.2)] md:ml-0 md:max-w-[24rem] md:px-5 md:py-5 md:text-[2.02rem]">
+            <p>Eine virtuelle Ausstellung zu</p>
+            <p>Hebels schriftstellerischem</p>
+            <p>Wirken anlässlich seines</p>
+            <p>200. Todestages am</p>
+            <p>22. September 2026</p>
+          </div>
+
+          <div
+            aria-label="Online ab 1. September 2026"
+            class="ml-auto flex aspect-square w-[9.4rem] shrink-0 flex-col items-center justify-center rounded-full border border-[#5f7389] bg-[#f6e1ae] text-center font-serif text-[#cc341c] shadow-[0_14px_26px_rgba(0,0,0,0.15)] md:mr-4 md:mb-2 md:w-[13.8rem] lg:w-[14.8rem]"
+          >
+            <p class="text-[1.8rem] italic md:text-[2.85rem]">online</p>
+            <p class="mt-1 text-[1.15rem] md:text-[1.8rem]">ab</p>
+            <p class="mt-2 text-[1.45rem] font-semibold md:text-[2.35rem]">1. September</p>
+            <p class="mt-1 text-[1.4rem] font-semibold md:text-[2.2rem]">2026</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="shrink-0 bg-[#dddede] px-3 py-2 text-[#365583]">
+      <div class="mx-auto flex max-w-[90rem] flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center font-sans text-[0.8rem] md:justify-end md:text-[1rem]">
+        <span>© Theodor Springmann Stiftung</span>
+        <span>|</span>
+        <span>Stand vom 1.4.2026</span>
+        <span>|</span>
+        <span>Impressum · Kontakt · Datenschutzerklärung · Admin-Bereich</span>
+      </div>
+    </footer>
+  </main>
+</StartLayout>
