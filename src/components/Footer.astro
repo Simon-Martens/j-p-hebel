@@ -2,9 +2,11 @@
 const buildDate = new Date().toLocaleDateString("de-DE");
 ---
 
-<footer class="border-t bg-gray-300 text-base border-black/10 px-6 py-1 text-right text-slate-700">
-  © Theodor Springmann Stiftung |
-  Stand vom {buildDate} |
-  <a href="/kontakt" class="hover:underline">Kontakt</a> ·
-  <a href="/datenschutz" class="hover:underline">Datenschutz</a>
+<footer class="flex h-8 items-center justify-end border-t border-black/10 bg-gray-300 px-6 text-right text-base leading-none text-slate-700">
+  <div>
+    © Theodor Springmann Stiftung |
+    Stand vom {buildDate} |
+    <a href="/kontakt" class="hover:underline">Kontakt</a> ·
+    <a href="/datenschutz" class="hover:underline">Datenschutz</a>
+  </div>
 </footer>
