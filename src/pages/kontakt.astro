@@ -21,14 +21,18 @@ import Logo from "../components/Logo.astro";
     </header>
 
     <section class="grow px-8 pb-8">
-      <div class="mx-auto max-w-6xl md:pl-[30%]">
-        <div class="font-serif text-main text-lg leading-relaxed md:text-2xl">
-          <p>Dr. Alexander Knopf</p>
-          <p>Theodor-Springmann-Stiftung</p>
-          <p>Hirschgasse 2</p>
-          <p>D – 69120 Heidelberg</p>
-          <p class="mt-6">Tel.: 06221-7258746</p>
-          <p class="mt-6">E-Mail: knopf@tss-hd.de</p>
+      <div class="flex w-full flex-col gap-8 lg:gap-12 xl:gap-16 md:flex-row">
+        <div class="shrink-0 grow-0 md:w-[30%]"></div>
+
+        <div class="w-full flex flex-col text-main grow w-[60%]">
+          <div class="font-serif text-main text-lg leading-relaxed md:text-2xl">
+            <p>Dr. Alexander Knopf</p>
+            <p>Theodor-Springmann-Stiftung</p>
+            <p>Hirschgasse 2</p>
+            <p>D – 69120 Heidelberg</p>
+            <p class="mt-6">Tel.: 06221-7258746</p>
+            <p class="mt-6">E-Mail: knopf@tss-hd.de</p>
+          </div>
         </div>
       </div>
     </section>
