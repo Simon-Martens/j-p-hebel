@@ -1,10 +1,10 @@
 ---
-import StartLayout from "../layouts/StartLayout.astro";
+import SubpageLayout from "../layouts/SubpageLayout.astro";
 import Footer from "../components/Footer.astro";
 import Logo from "../components/Logo.astro";
 ---
 
-<StartLayout title="Johann Peter Hebel | Datenschutz">
+<SubpageLayout title="Johann Peter Hebel | Datenschutz" currentPage="datenschutz">
   <main class="flex min-h-screen flex-col">
     <header class="shrink-0 px-8 font-serif md:mt-12 md:mb-6 mt-6 mb-4">
       <div class="flex w-full flex-col gap-8 lg:gap-12 xl:gap-16 md:mb-6 md:flex-row">
@@ -356,4 +356,4 @@ padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt">
 	</div>
     <Footer />
   </main>
-</StartLayout>
+</SubpageLayout>

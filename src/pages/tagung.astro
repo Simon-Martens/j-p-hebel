@@ -1,5 +1,5 @@
 ---
-import StartLayout from "../layouts/StartLayout.astro";
+import SubpageLayout from "../layouts/SubpageLayout.astro";
 import Footer from "../components/Footer.astro";
 import manuscript from "../assets/Brief-Koelle_Ausschnitt.jpg";
 
@@ -98,20 +98,22 @@ const vortraege = [
 ---
 
 
-<StartLayout title="Johann Peter Hebel | Tagung">
+<SubpageLayout title="Johann Peter Hebel | Tagung" currentPage="tagung">
   <main class="flex min-h-screen flex-col">
 
     <header class="shrink-0 px-8 py-4 font-serif">
-      <div class="mb-6 flex-col mx-auto flex-col items-center gap-8 lg:gap-12 xl:gap-16 md:mb-6 md:flex-row">
+      <div class="my-3 md:my-6 flex-col mx-auto flex-col items-center gap-8 lg:gap-12 xl:gap-16 md:mb-6 md:flex-row">
           <h1 class="font-light sm text-center text-accent">
 						Tagung
           </h1>
 					<div class="mt-4 md:mt-6">
-						<h1 class="sm text-center leading-normal"> 
-							»Mein Gemüth ist Ihnen nie näher, als wenn ich weit von Ihnen bin«.<br>
-							Neue Zugänge zu Johann Peter Hebels Briefwerk
+						<h1 class="text-center text-2xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
+							»Mein Gemüth ist Ihnen nie näher, als wenn ich weit von Ihnen bin«.
 						</h1>
-						<div class="mt-3 md:mt-6 text-center text-base text-main md:block md:text-xl lg:text-2xl xl:text-3xl"> 
+          <h2 class="mt-4 text-center text-xl md:mt-6 md:text-4xl">
+            Neue Zugänge zu Johann Peter Hebels Briefwerk
+          </h2>
+						<div class="mt-3 md:mt-6 text-center text-base"> 
 							veranstaltet vom Hebel-Archiv Heidelberg in Zusammenarbeit mit der BLB Karlsruhe
 						</div>
 					</div>
@@ -125,7 +127,6 @@ const vortraege = [
         alt="Ausschnitt aus einer Hebel-Handschrift"
         class="absolute inset-0 h-full w-full object-cover"
       />
-      <div class="absolute inset-0 bg-paper/35"></div>
 			<div class="mx-12 flex flex-col lg:flex-row gap-x-12 relative max-w-5xl mx-auto lg:items-start">
 					<div class="lg:hidden relative mt-6 md: mt-2 md:-right-24 w-fit text-paper bg-slate-900 text-xl md:text-3xl p-7 font-serif text-center">
 						<p>17.&thinsp;/&thinsp;18. September 2026
@@ -197,4 +198,4 @@ const vortraege = [
       <Footer />
     </div>
   </main>
-</StartLayout>
+</SubpageLayout>

@@ -1,5 +1,5 @@
 ---
-import StartLayout from "../layouts/StartLayout.astro";
+import SubpageLayout from "../layouts/SubpageLayout.astro";
 import Footer from "../components/Footer.astro";
 import Logo from "../components/Logo.astro";
 import manuscript from "../assets/AG3_Ausschnitt.jpg";
@@ -84,20 +84,20 @@ const volumes = [
 ];
 ---
 
-<StartLayout title="Johann Peter Hebel | Sämtliche Schriften">
+<SubpageLayout title="Johann Peter Hebel | Sämtliche Schriften" currentPage="edition">
   <main class="flex min-h-screen flex-col">
 
     <header class="shrink-0 px-8 py-4 font-serif">
-      <div class="mb-6 flex w-full flex-col items-center gap-8 lg:gap-12 xl:gap-16 md:mb-6 md:flex-row">
+      <div class="my-3 md:my-6 flex w-full flex-col items-center gap-8 lg:gap-12 xl:gap-16 md:mb-6 md:flex-row">
 				<div class="md:w-[30%] shrink-0 grow-0 flex md:justify-end mx-auto md:mx-0">
         	<Logo class="" />
 				</div>
 
-        <div class="md:w-full lg:mt-0 flex flex-col text-main grow md:w-[60%]">
+        <div class="md:w-full flex flex-col text-main grow md:w-[60%]">
           <h1 class="font-light mid">
             Johann Peter Hebel
           </h1>
-					<div class="font-sans md:ml-18 mt-2">
+					<div class="font-sans md:ml-8 mt-2">
 						<h1 class="mid text-accent">
 							Sämtliche Schriften
 						</h1>
@@ -105,8 +105,8 @@ const volumes = [
 							Historisch-kritische Edition und Kommentar
 						</h2>
 					</div>
-					<div class="mt-1 hidden md:block"> 
-            Die Ausgabe ist ein Projekt der Theodor Springmann Stiftung.
+					<div class="mt-1 hidden md:block md:ml-16"> 
+            Ein Projekt der Theodor Springmann Stiftung
           </div>
         </div>
       </div>
@@ -119,7 +119,7 @@ const volumes = [
         alt="Ausschnitt aus einer Hebel-Handschrift"
         class="absolute inset-0 h-full w-full object-cover"
       />
-      <div class="absolute inset-0 bg-paper/35"></div>
+      <div class="absolute inset-0 bg-paper/20"></div>
 
       <div class="relative mx-auto max-w-4xl">
         <article class="edition-overview mx-auto max-w-5xl bg-stone-200 px-6 py-7 text-[#1f365c] shadow-[0_12px_40px_rgba(0,0,0,0.08)] md:px-10 md:py-10">
@@ -165,4 +165,4 @@ const volumes = [
       <Footer />
     </div>
   </main>
-</StartLayout>
+</SubpageLayout>

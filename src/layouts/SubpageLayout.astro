@@ -1,0 +1,28 @@
+---
+import "../styles/global.css";
+import SubpageMenu from "../components/SubpageMenu.astro";
+
+interface Props {
+  title?: string;
+  currentPage?: "edition" | "tagung" | "ausstellung" | "kontakt" | "datenschutz";
+}
+
+const {
+  title = "Johann Peter Hebel-Archiv",
+  currentPage,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-paper text-[#1f365c]">
+    <SubpageMenu currentPage={currentPage} />
+    <slot />
+  </body>
+</html>

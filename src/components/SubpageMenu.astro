@@ -1,0 +1,116 @@
+---
+interface Props {
+  currentPage?: "edition" | "tagung" | "ausstellung" | "kontakt" | "datenschutz";
+}
+
+const { currentPage } = Astro.props;
+const base = import.meta.env.BASE_URL;
+
+const items = [
+  { href: `${base}`, label: "Johann Peter Hebel-Archiv", key: "home" },
+  { href: `${base}edition`, label: "Sämtliche Schriften: Historisch-kritische Edition", key: "edition" },
+  { href: `${base}tagung`, label: "Tagung: Neue Zugänge zu Hebels Briefwek", key: "tagung" },
+  { href: `${base}ausstellung`, label: "Virtuelle Ausstellung: Das Nachleben der Worte", key: "ausstellung" },
+];
+---
+
+<nav class="subpage-menu pointer-events-none fixed top-4 md:top-6 left-0 z-50 block" aria-label="Seitennavigation">
+  <details class="group pointer-events-auto relative inline-block">
+    <summary class="subpage-menu__shell flex w-fit list-none items-center font-serif text-main">
+      <a
+        href={base}
+        class="subpage-menu__home flex h-12 w-12 items-center justify-center px-0 py-0 md:w-auto md:gap-3 md:px-4 md:py-3 text-main"
+        aria-label="Zur Startseite"
+      >
+        <i class="ri-arrow-left-line text-xl" aria-hidden="true"></i>
+        <span class="hidden text-[1.05rem] leading-none tracking-[0.02em] lg:block">
+          <span>JPH</span><span class="text-accent">A</span>
+        </span>
+      </a>
+
+      <span class="subpage-menu__toggle flex h-12 w-12 items-center justify-center border-l border-slate-900/30 px-0 py-0 md:w-auto md:gap-2 md:px-4 md:py-3">
+        <span class="hidden text-[1rem] leading-none lg:block">Menu</span>
+        <i class="ri-menu-line text-lg text-accent" aria-hidden="true"></i>
+      </span>
+    </summary>
+
+    <div class="subpage-menu__panel absolute top-full left-0 mt-2 min-w-[16rem] md:min-w-[20rem] px-4 py-3 font-serif text-main">
+      <ul class="space-y-2 text-base md:text-lg">
+        {items.map((item) => {
+          const isActive = item.key === currentPage;
+
+          return (
+            <li>
+              <a
+                href={item.href}
+                aria-current={isActive ? "page" : undefined}
+                class:list={[
+                  "block transition-colors hover:text-accent",
+                  isActive ? "text-accent" : "text-main",
+                ]}
+              >
+                {item.label}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  </details>
+</nav>
+
+<style>
+  .subpage-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .subpage-menu summary::marker {
+    content: "";
+  }
+
+  .subpage-menu__shell,
+  .subpage-menu__panel {
+    background: rgb(231 228 200 / 0.95);
+    border-top: 1px solid rgb(15 23 42 / 0.34);
+    border-right: 1px solid rgb(15 23 42 / 0.34);
+    border-bottom: 1px solid rgb(15 23 42 / 0.34);
+    border-left: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition:
+      background-color 160ms ease,
+      border-color 160ms ease,
+      box-shadow 160ms ease;
+  }
+
+  .subpage-menu__shell {
+    cursor: pointer;
+  }
+
+  .subpage-menu__home {
+    text-decoration: none;
+    transition:
+      background-color 140ms ease,
+      color 140ms ease;
+  }
+
+  .subpage-menu__toggle {
+    transition:
+      background-color 140ms ease,
+      color 140ms ease;
+  }
+
+  .subpage-menu details:hover .subpage-menu__panel {
+    background: rgb(231 228 200);
+    border-color: rgb(15 23 42 / 0.42);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .subpage-menu__home:hover {
+    background: rgb(31 54 92 / 0.06);
+    color: rgb(31 54 92);
+  }
+
+  .subpage-menu__toggle:hover {
+    background: rgb(180 56 47 / 0.08);
+  }
+</style>
