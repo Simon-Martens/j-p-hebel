@@ -1,16 +1,29 @@
 ---
+import type { ImageMetadata } from "astro";
 import "../styles/global.css";
 import SubpageMenu from "../components/SubpageMenu.astro";
 
 interface Props {
   title?: string;
+  description?: string;
+  pathname?: string;
+  image?: ImageMetadata | string;
+  robots?: string;
   currentPage?: "edition" | "tagung" | "ausstellung" | "kontakt" | "datenschutz";
 }
 
 const {
   title = "Johann Peter Hebel-Archiv",
+  description = "Das Johann Peter Hebel-Archiv präsentiert die historisch-kritische Edition, eine Tagung zu Hebels Briefwerk und die virtuelle Ausstellung „Das Nachleben der Worte“.",
+  pathname = "/",
+  image,
+  robots = "index, follow",
   currentPage,
 } = Astro.props;
+
+const canonicalUrl = new URL(pathname, Astro.site);
+const imageSrc = typeof image === "string" ? image : image?.src;
+const socialImageUrl = imageSrc ? new URL(imageSrc, Astro.site).toString() : undefined;
 ---
 
 <!doctype html>
@@ -18,7 +31,20 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex, nofollow" />
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:site_name" content="Johann Peter Hebel-Archiv" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    {socialImageUrl && <meta property="og:image" content={socialImageUrl} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {socialImageUrl && <meta name="twitter:image" content={socialImageUrl} />}
     <title>{title}</title>
   </head>
   <body class="min-h-screen bg-paper text-[#1f365c]">

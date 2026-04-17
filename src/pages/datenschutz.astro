@@ -2,9 +2,16 @@
 import SubpageLayout from "../layouts/SubpageLayout.astro";
 import Footer from "../components/Footer.astro";
 import Logo from "../components/Logo.astro";
+import portrait from "../assets/Hebel-Portrait_Mueller_Ausschnitt.jpg";
 ---
 
-<SubpageLayout title="Johann Peter Hebel | Datenschutz" currentPage="datenschutz">
+<SubpageLayout
+  title="Datenschutz | Johann Peter Hebel-Archiv"
+  description="Datenschutzhinweise des Johann Peter Hebel-Archivs und der Theodor-Springmann-Stiftung zur Verarbeitung personenbezogener Daten auf dieser Website."
+  pathname="/datenschutz"
+  image={portrait}
+  currentPage="datenschutz"
+>
   <main class="flex min-h-screen flex-col">
     <header class="shrink-0 px-8 font-serif md:mt-12 md:mb-6 mt-6 mb-4">
       <div class="flex w-full flex-col gap-8 lg:gap-12 xl:gap-16 md:mb-6 md:flex-row">

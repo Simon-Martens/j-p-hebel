@@ -4,7 +4,13 @@ import Footer from "../components/Footer.astro";
 import cover from "../assets/biblische_geschichten_cover.jpg";
 ---
 
-<SubpageLayout title="Johann Peter Hebel | Das Nachleben der Worte" currentPage="ausstellung">
+<SubpageLayout
+  title="Das Nachleben der Worte | Virtuelle Hebel-Ausstellung"
+  description="Virtuelle Ausstellung zum schriftstellerischen Wirken Johann Peter Hebels anlässlich seines 200. Todestages, online ab dem 1. September 2026."
+  pathname="/ausstellung"
+  image={cover}
+  currentPage="ausstellung"
+>
   <main class="flex min-h-screen flex-col">
     <header class="shrink-0 px-8 py-4 font-serif">
       <div class="my-3 md:my-6 flex-col mx-auto flex-col items-center gap-8 lg:gap-12 xl:gap-16 md:mb-6 md:flex-row">

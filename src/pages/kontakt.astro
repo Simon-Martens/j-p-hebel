@@ -2,9 +2,16 @@
 import SubpageLayout from "../layouts/SubpageLayout.astro";
 import Footer from "../components/Footer.astro";
 import Logo from "../components/Logo.astro";
+import portrait from "../assets/Hebel-Portrait_Mueller_Ausschnitt.jpg";
 ---
 
-<SubpageLayout title="Johann Peter Hebel | Kontakt" currentPage="kontakt">
+<SubpageLayout
+  title="Kontakt | Johann Peter Hebel-Archiv"
+  description="Kontakt zum Johann Peter Hebel-Archiv und zur Theodor-Springmann-Stiftung in Heidelberg."
+  pathname="/kontakt"
+  image={portrait}
+  currentPage="kontakt"
+>
   <main class="flex min-h-screen flex-col">
     <header class="shrink-0 px-8 font-serif md:mt-12 md:mb-6 mt-6 mb-4">
       <div class="flex w-full flex-col gap-8 lg:gap-12 xl:gap-16 md:mb-6 md:flex-row">
