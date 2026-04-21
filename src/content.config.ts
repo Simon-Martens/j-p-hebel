@@ -1,39 +1,6 @@
 import { glob } from "astro/loaders";
 import { defineCollection, z } from "astro:content";
 
-const richTextRunSchema = z.object({
-  text: z.string(),
-  bold: z.boolean().optional(),
-  italic: z.boolean().optional(),
-  href: z.string().optional(),
-  targetBlank: z.boolean().optional(),
-  ariaLabel: z.string().optional(),
-});
-
-const richTextBlockSchema = z.discriminatedUnion("type", [
-  z.object({
-    type: z.literal("heading"),
-    level: z.union([z.literal(2), z.literal(3)]),
-    text: z.string(),
-    className: z.string().optional(),
-  }),
-  z.object({
-    type: z.literal("paragraph"),
-    runs: z.array(richTextRunSchema).min(1),
-    className: z.string().optional(),
-  }),
-  z.object({
-    type: z.literal("lines"),
-    lines: z.array(z.array(richTextRunSchema).min(1)).min(1),
-    className: z.string().optional(),
-  }),
-  z.object({
-    type: z.literal("list"),
-    items: z.array(z.array(richTextRunSchema).min(1)).min(1),
-    className: z.string().optional(),
-  }),
-]);
-
 const site = defineCollection({
   loader: glob({ pattern: "global.json", base: "./src/content" }),
   schema: z.object({
@@ -193,8 +160,6 @@ const datenschutzPage = defineCollection({
       description: z.string(),
     }),
     heroTitle: z.string(),
-    noticeBlocks: z.array(richTextBlockSchema).min(1),
-    contentBlocks: z.array(richTextBlockSchema).min(1),
   }),
 });
 
