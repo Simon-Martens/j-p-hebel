@@ -1,0 +1,24 @@
+{
+  "seo": {
+    "title": "Das Nachleben der Worte | Virtuelle Hebel-Ausstellung",
+    "description": "Virtuelle Ausstellung zum schriftstellerischen Wirken Johann Peter Hebels anlässlich seines 200. Todestages, online ab dem 1. September 2026."
+  },
+  "imageAlt": "Biblische Geschichten, Coverdetail mit lesendem Engel",
+  "hero": {
+    "title": "Johann Peter Hebel",
+    "subtitle": "Das Nachleben der Worte",
+    "cardLines": [
+      "Eine virtuelle Ausstellung zu",
+      "Hebels schriftstellerischem",
+      "Wirken anlässlich seines",
+      "200. Todestages",
+      "am 22. September 2026"
+    ]
+  },
+  "badge": {
+    "label": "online",
+    "preposition": "ab",
+    "date": "1. September",
+    "year": "2026"
+  }
+}

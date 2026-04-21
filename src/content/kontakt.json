@@ -1,0 +1,21 @@
+{
+  "seo": {
+    "title": "Kontakt | Johann Peter Hebel-Archiv",
+    "description": "Kontakt zum Johann Peter Hebel-Archiv und zur Theodor-Springmann-Stiftung in Heidelberg."
+  },
+  "heroTitle": "Kontakt",
+  "contactGroups": [
+    [
+      "Dr. Alexander Knopf",
+      "Theodor-Springmann-Stiftung",
+      "Hirschgasse 2",
+      "D – 69120 Heidelberg"
+    ],
+    [
+      "Tel.: 06221-7258746"
+    ],
+    [
+      "E-Mail: info@hebel-archiv.de"
+    ]
+  ]
+}

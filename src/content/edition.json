@@ -1,0 +1,100 @@
+{
+  "seo": {
+    "title": "Sämtliche Schriften | Johann Peter Hebel-Archiv",
+    "description": "Johann Peter Hebel: Sämtliche Schriften. Historisch-kritische Edition und Kommentar. Ein Projekt der Theodor Springmann Stiftung."
+  },
+  "imageAlt": "Ausschnitt aus einer Hebel-Handschrift",
+  "hero": {
+    "eyebrow": "Johann Peter Hebel",
+    "title": "Sämtliche Schriften",
+    "subtitle": "Historisch-kritische Edition und Kommentar",
+    "foundationText": "Ein Projekt der Theodor Springmann Stiftung"
+  },
+  "overviewTitle": "Übersicht",
+  "introStudy": {
+    "title": "Vorstudie zur Historisch-Kritischen Gesamtausgabe. 84 S.",
+    "paragraphs": [
+      "Enthält u. a. einen Bericht der Herausgeber, die Urfassung von »Der Statthalter von Schopfheim« und »Der Spaziergang zum See«",
+      "Herausgegeben von Adrian Braunbehrens und Peter Pfaff",
+      "Verlag C. F. Müller Karlsruhe 1988, ISBN 3-7880-9766-3"
+    ]
+  },
+  "volumes": [
+    {
+      "band": "I",
+      "title": "Gedichte",
+      "pages": "Ca. 350 Seiten",
+      "lines": [
+        "Alemannische Gedichte. Hochdeutsche Dichtungen. Rätsel.",
+        "(erscheint voraussichtlich 2027)"
+      ]
+    },
+    {
+      "band": "II/III",
+      "title": "Erzählungen und Aufsätze",
+      "pages": "660 Seiten",
+      "lines": [
+        "Die Kalenderbeiträge des rheinländischen Hausfreundes. Sonstige Prosa. (Mit den Holzstichen der Kalender)",
+        "Herausgegeben von Adrian Braunbehrens und Peter Pfaff unter Mitwirkung von Bernhard Oswald",
+        "Verlag C. F. Müller Karlsruhe 1990, ISBN 3-7880-9785-x"
+      ]
+    },
+    {
+      "band": "IV",
+      "title": "Apparat zu den Bänden I-III",
+      "pages": "Ca. 350 Seiten",
+      "lines": [
+        "Das Verfahren der Edition. Textgeschichte. Die Varianten in den Handschriften und autorisierten Drucken.",
+        "(erscheint voraussichtlich 2027)"
+      ]
+    },
+    {
+      "band": "V",
+      "title": "Biblische Geschichten",
+      "pages": "318 Seiten",
+      "lines": [
+        "Biblische Geschichten, Text- und Druckgeschichte, Textvarianten",
+        "Herausgegeben von Gustav Adolf Benrath und Adrian Braunbehrens unter Mitwirkung von Gerd Müller",
+        "Verlag C. F. Müller Karlsruhe 1991, ISBN 3-7880-9805-8"
+      ]
+    },
+    {
+      "band": "VI/VII",
+      "title": "Predigten und Predigtentwürfe",
+      "pages": "850 Seiten",
+      "lines": [
+        "Predigten und Predigtentwürfe, Text- und Druckgeschichte, Textvarianten, Dokumentation, Register",
+        "Herausgegeben von Johann Anselm Steiger und Mitwirkung von Thomas Illig",
+        "Stroemfeld Verlag Frankfurt am Main 2010, ISBN 978-3-87877-534-3"
+      ]
+    },
+    {
+      "band": "VIII",
+      "title": "Theologische Schriften",
+      "pages": "388 Seiten",
+      "lines": [
+        "Katechismus, Beiträge zur Liturgie und Religionswissenschaft, Text- und Druckgeschichte, Textvarianten, Dokumentation, Register",
+        "Herausgegeben von Johann Anselm Steiger und Mitwirkung von Thomas Illig",
+        "Stroemfeld Verlag Frankfurt am Main 2013, ISBN 978-3-87877-537-9"
+      ]
+    },
+    {
+      "band": "IX/X",
+      "title": "Amtschriften und nachgelassene Aufzeichnungen",
+      "pages": "Ca. 500 Seiten",
+      "lines": [
+        "Gutachten und Amtschriften. Auszüge aus Büchern und Zeitschriften. Entwürfe für den Unterricht. Gedanken, Einfälle und Träume. Ca. 500 Seiten",
+        "(in Vorbereitung)"
+      ]
+    },
+    {
+      "band": "X–XII",
+      "title": "Hebels Briefe",
+      "pages": "Ca. 1000 Seiten",
+      "lines": [
+        "Briefe, Textvarianten, Register. Ca. 1000 Seiten",
+        "(in Vorbereitung)"
+      ]
+    }
+  ]
+}

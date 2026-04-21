@@ -1,19 +1,28 @@
 ---
+import { getCollection } from "astro:content";
+
 interface Props {
   class?: string;
 }
 
 const { class: className = "" } = Astro.props;
+const [siteContent] = await getCollection("site");
+
+if (!siteContent) {
+  throw new Error("Missing site content entry.");
+}
+
 const base = import.meta.env.BASE_URL;
+const brand = siteContent.data.brand;
 ---
 
 <div class={`font-serif ${className}`.trim()}>
 	<a href={base} class="flex flex-col">
 		<div class="text-6xl text-main sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem] 2xl:text-8xl">
-			<span>JPH</span><span class="text-accent">A</span>
+			<span>{brand.markLeading}</span><span class="text-accent">{brand.markAccent}</span>
 		</div>
 		<div class="-mt-1 text-base text-main text-lg md:text-xl lg:text-2xl xl:text-3xl w-fit text-right self-end">
-			Heidelberg
+			{brand.location}
 		</div>
 	</a>
 </div>

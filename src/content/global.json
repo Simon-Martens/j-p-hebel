@@ -1,0 +1,46 @@
+{
+  "brand": {
+    "markLeading": "JPH",
+    "markAccent": "A",
+    "location": "Heidelberg"
+  },
+  "seoDefaults": {
+    "title": "Johann Peter Hebel-Archiv",
+    "description": "Das Johann Peter Hebel-Archiv präsentiert die historisch-kritische Edition, eine Tagung zu Hebels Briefwerk und die virtuelle Ausstellung „Das Nachleben der Worte“."
+  },
+  "nav": {
+    "ariaLabel": "Seitennavigation",
+    "homeAriaLabel": "Zur Startseite",
+    "menuLabel": "Menu",
+    "items": [
+      {
+        "key": "home",
+        "href": "/",
+        "label": "Johann Peter Hebel-Archiv"
+      },
+      {
+        "key": "edition",
+        "href": "/edition",
+        "label": "Sämtliche Schriften: Historisch-kritische Edition"
+      },
+      {
+        "key": "tagung",
+        "href": "/tagung",
+        "label": "Tagung: Neue Zugänge zu Hebels Briefwerk"
+      },
+      {
+        "key": "ausstellung",
+        "href": "/ausstellung",
+        "label": "Virtuelle Ausstellung: Das Nachleben der Worte"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© Theodor Springmann Stiftung",
+    "buildDatePrefix": "Stand vom",
+    "links": {
+      "kontakt": "Kontakt",
+      "datenschutz": "Datenschutz"
+    }
+  }
+}

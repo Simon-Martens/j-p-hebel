@@ -1,0 +1,108 @@
+{
+  "seo": {
+    "title": "Tagung zu Hebels Briefwerk | Johann Peter Hebel-Archiv",
+    "description": "Ankündigung und Programm der Tagung „Neue Zugänge zu Johann Peter Hebels Briefwerk“ am 17. und 18. September 2026 in der Badischen Landesbibliothek Karlsruhe."
+  },
+  "imageAlt": "Ausschnitt aus einer Hebel-Handschrift",
+  "hero": {
+    "eyebrow": "Tagung",
+    "title": "»Mein Gemüth ist Ihnen nie näher, als wenn ich weit von Ihnen bin«.",
+    "subtitle": "Neue Zugänge zu Johann Peter Hebels Briefwerk",
+    "organizer": "veranstaltet vom Hebel-Archiv Heidelberg in Zusammenarbeit mit der BLB Karlsruhe"
+  },
+  "badgeLines": [
+    "17./18. September 2026",
+    "Badische Landesbibliothek Karlsruhe"
+  ],
+  "days": [
+    {
+      "date": "17. September 2026",
+      "talks": [
+        {
+          "time": "09.30",
+          "title": "Begrüßung"
+        },
+        {
+          "time": "09.45",
+          "name": "Alexander Knopf",
+          "title": "„Mikrologen und Wortdüftler“. Beobachtungen zur Epistolarik bei Johann Peter Hebel"
+        },
+        {
+          "time": "10.30",
+          "name": "Florian Telsing",
+          "title": "Apokryphische Sendungen. Versuch über eine Theorie der brieflichen Schreibform bei Johann Peter Hebel"
+        },
+        {
+          "time": "11.30",
+          "name": "Fabian Goppelsröder",
+          "title": "Der Brief als Kleine Form"
+        },
+        {
+          "time": "12.15",
+          "name": "Paul Whitehead",
+          "title": "„Abermal ein Brief voll geplaudert!“ Zur kommunikativen Selbstformung in Johann Peter Hebels Briefen"
+        },
+        {
+          "time": "14.00",
+          "name": "Monika Schmitz-Emans",
+          "title": "Die Drossel und die Ananas. Resonanzen zwischen Hebel und Jean Paul"
+        },
+        {
+          "time": "14.45",
+          "name": "Andreas Beck",
+          "title": "Auferstanden von den Toten? Hebels moribunde Reanimation von schreibendem Freund und poetischem Werk in einem Brief an Sophie Haufe"
+        },
+        {
+          "time": "16.00",
+          "name": "Thomas Schestag",
+          "title": "Larven über Larven"
+        },
+        {
+          "time": "19.00",
+          "name": "Ulrike Draesner",
+          "title": "Wie man sich bettet, so lügt man (Abendvortrag)"
+        }
+      ]
+    },
+    {
+      "date": "18. September 2026",
+      "talks": [
+        {
+          "time": "09.30",
+          "name": "Jochen Strobel",
+          "title": "Briefe als ‚Akteure‘ und als autoritative Schriftmedien in Johann Peter Hebels Kalendergeschichten"
+        },
+        {
+          "time": "10.15",
+          "name": "Johann Anselm Steiger",
+          "title": "Hebels sog. eschatologischer Brief vor dem Hintergrund der frühneuzeitlichen Befassung mit den quatuor novissima"
+        },
+        {
+          "time": "11.15",
+          "name": "Guido Bee",
+          "title": "Spuren spätaufklärerischen Denkens in Hebels Briefwerk"
+        },
+        {
+          "time": "13.00",
+          "name": "Thorsten Fitzon",
+          "title": "„Was ist denn Schreiben mehr als Reden?“ – Zur Vorläufigkeit des Schreibens in Hebels Briefen"
+        },
+        {
+          "time": "13.45",
+          "name": "Jakob Brüssermann",
+          "title": "Hebel der Zirkelschmied. Über schelmische Ehrlichkeit"
+        },
+        {
+          "time": "15.00",
+          "name": "Bernhard Stricker",
+          "title": "Hebel und die optische Telegraphie"
+        },
+        {
+          "time": "15.45",
+          "name": "Peter Risthaus",
+          "title": "Hebel als Ratgeber"
+        }
+      ]
+    }
+  ]
+}

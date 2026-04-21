@@ -1,106 +1,23 @@
 ---
+import { getCollection } from "astro:content";
 import SubpageLayout from "../layouts/SubpageLayout.astro";
 import Footer from "../components/Footer.astro";
 import manuscript from "../assets/Brief-Koelle_Ausschnitt.jpg";
 
-const vortraege = [
-    {
-      "date": "17. September 2026",
-      "vortraege": [
-        {
-          "time": "09.30",
-          "title": "Begrüßung"
-        },
-        {
-          "time": "09.45",
-          "name": "Alexander Knopf",
-          "title": "„Mikrologen und Wortdüftler“. Beobachtungen zur Epistolarik bei Johann Peter Hebel"
-        },
-        {
-          "time": "10.30",
-          "name": "Florian Telsing",
-          "title": "Apokryphische Sendungen. Versuch über eine Theorie der brieflichen Schreibform bei Johann Peter Hebel"
-        },
-        {
-          "time": "11.30",
-          "name": "Fabian Goppelsröder",
-          "title": "Der Brief als Kleine Form"
-        },
-        {
-          "time": "12.15",
-          "name": "Paul Whitehead",
-          "title": "„Abermal ein Brief voll geplaudert!“ Zur kommunikativen Selbstformung in Johann Peter Hebels Briefen"
-        },
-        {
-          "time": "14.00",
-          "name": "Monika Schmitz-Emans",
-          "title": "Die Drossel und die Ananas. Resonanzen zwischen Hebel und Jean Paul"
-        },
-        {
-          "time": "14.45",
-          "name": "Andreas Beck",
-          "title": "Auferstanden von den Toten? Hebels moribunde Reanimation von schreibendem Freund und poetischem Werk in einem Brief an Sophie Haufe"
-        },
-        {
-          "time": "16.00",
-          "name": "Thomas Schestag",
-          "title": "Larven über Larven"
-        },
-        {
-          "time": "19.00",
-          "name": "Ulrike Draesner",
-          "title": "Wie man sich bettet, so lügt man (Abendvortrag)"
-        }
-      ]
-    },
-    {
-      "date": "18. September 2026",
-      "vortraege": [
-        {
-          "time": "09.30",
-          "name": "Jochen Strobel",
-          "title": "Briefe als ‚Akteure‘ und als autoritative Schriftmedien in Johann Peter Hebels Kalendergeschichten"
-        },
-        {
-          "time": "10.15",
-          "name": "Johann Anselm Steiger",
-          "title": "Hebels sog. eschatologischer Brief vor dem Hintergrund der frühneuzeitlichen Befassung mit den quatuor novissima"
-        },
-        {
-          "time": "11.15",
-          "name": "Guido Bee",
-          "title": "Spuren spätaufklärerischen Denkens in Hebels Briefwerk"
-        },
-        {
-          "time": "13.00",
-          "name": "Thorsten Fitzon",
-          "title": "„Was ist denn Schreiben mehr als Reden?“ – Zur Vorläufigkeit des Schreibens in Hebels Briefen"
-        },
-        {
-          "time": "13.45",
-          "name": "Jakob Brüssermann",
-          "title": "Hebel der Zirkelschmied. Über schelmische Ehrlichkeit"
-        },
-        {
-          "time": "15.00",
-          "name": "Bernhard Stricker",
-          "title": "Hebel und die optische Telegraphie"
-        },
-        {
-          "time": "15.45",
-          "name": "Peter Risthaus",
-          "title": "Hebel als Ratgeber"
-        }
-      ]
-    }
-  ]
+const [tagungPage] = await getCollection("tagungPage");
+
+if (!tagungPage) {
+  throw new Error("Missing tagung page content.");
+}
+
+const content = tagungPage.data;
 
 ---
 
 
 <SubpageLayout
-  title="Tagung zu Hebels Briefwerk | Johann Peter Hebel-Archiv"
-  description="Ankündigung und Programm der Tagung „Neue Zugänge zu Johann Peter Hebels Briefwerk“ am 17. und 18. September 2026 in der Badischen Landesbibliothek Karlsruhe."
+  title={content.seo.title}
+  description={content.seo.description}
   pathname="/tagung"
   image={manuscript}
   currentPage="tagung"
@@ -110,17 +27,17 @@ const vortraege = [
     <header class="shrink-0 px-8 py-4 font-serif">
       <div class="my-3 md:my-6 flex-col mx-auto flex-col items-center gap-8 lg:gap-12 xl:gap-16 md:mb-6 md:flex-row">
           <h1 class="font-light sm text-center text-accent">
-						Tagung
+						{content.hero.eyebrow}
           </h1>
 					<div class="mt-4 md:mt-6">
 						<h1 class="text-center text-2xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
-							»Mein Gemüth ist Ihnen nie näher, als wenn ich weit von Ihnen bin«.
+							{content.hero.title}
 						</h1>
           <h2 class="mt-4 text-center text-xl md:mt-3 md:text-3xl">
-            Neue Zugänge zu Johann Peter Hebels Briefwerk
+            {content.hero.subtitle}
           </h2>
 						<div class="mt-1 md:mt-2 text-center text-base"> 
-							veranstaltet vom Hebel-Archiv Heidelberg in Zusammenarbeit mit der BLB Karlsruhe
+							{content.hero.organizer}
 						</div>
 					</div>
         </div>
@@ -130,24 +47,24 @@ const vortraege = [
     <section class="relative overflow-hidden px-4 pb-8 pt-2 md:px-8 md:pb-12 lg:px-14">
       <img
         src={manuscript.src}
-        alt="Ausschnitt aus einer Hebel-Handschrift"
+        alt={content.imageAlt}
         class="absolute inset-0 h-full w-full object-cover"
       />
 			<div class="mx-12 flex flex-col lg:flex-row gap-x-12 relative max-w-5xl mx-auto lg:items-start">
 					<div class="lg:hidden relative mt-6 md: mt-2 md:-right-24 w-fit text-paper bg-slate-900 text-xl md:text-3xl p-7 font-serif text-center">
-						<p>17.&thinsp;/&thinsp;18. September 2026
-						<p>Badische Landesbibliothek Karlsruhe
+						<p>{content.badgeLines[0]}</p>
+						<p>{content.badgeLines[1]}</p>
 					</div>
 
 				<div class="bg-paper p-4 lg:w-[50%] grow-0 shrink-0 mt-8 md:mt-18">
 					<div class="text-2xl text-accent font-serif text-center mb-4">
-						{vortraege[0].date}
+						{content.days[0].date}
 					</div>
 					<div class="xl:font-lg font-serif">
 						<table>
 							<tbody>
 								{
-									vortraege[0].vortraege.map((vortrag) => (
+									content.days[0].talks.map((vortrag) => (
 										<tr class="align-top">
                       <td class="px-2">{vortrag.time}</td>
                       <td class="px-2">
@@ -164,19 +81,19 @@ const vortraege = [
 
 				<div class="lg:w-[50%] grow-0 shrink-0 mt-8 relative">
 					<div class="hidden lg:block relative xl:-right-24 w-fit text-paper bg-slate-900 text-3xl p-7 font-serif text-center">
-						<p>17./18. September 2026
-						<p>Badische Landesbibliothek Karlsruhe
+						<p>{content.badgeLines[0]}</p>
+						<p>{content.badgeLines[1]}</p>
 					</div>
 
 				<div class="bg-paper p-4 grow-0 shrink-0 lg:mt-18 ">
 					<div class="mb-2 text-2xl text-accent font-serif text-center mb-4">
-						{vortraege[1].date}
+						{content.days[1].date}
 					</div>
 					<div class="xl:font-lg font-serif">
 						<table>
 							<tbody>
 								{
-									vortraege[1].vortraege.map((vortrag) => (
+									content.days[1].talks.map((vortrag) => (
 										<tr class="align-top">
                       <td class="px-2">{vortrag.time}</td>
                       <td class="px-2">

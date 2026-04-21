@@ -1,13 +1,22 @@
 ---
+import { getCollection } from "astro:content";
 import SubpageLayout from "../layouts/SubpageLayout.astro";
 import Footer from "../components/Footer.astro";
 import Logo from "../components/Logo.astro";
 import portrait from "../assets/Hebel-Portrait_Mueller_Ausschnitt.jpg";
+
+const [kontaktPage] = await getCollection("kontaktPage");
+
+if (!kontaktPage) {
+  throw new Error("Missing kontakt page content.");
+}
+
+const content = kontaktPage.data;
 ---
 
 <SubpageLayout
-  title="Kontakt | Johann Peter Hebel-Archiv"
-  description="Kontakt zum Johann Peter Hebel-Archiv und zur Theodor-Springmann-Stiftung in Heidelberg."
+  title={content.seo.title}
+  description={content.seo.description}
   pathname="/kontakt"
   image={portrait}
   currentPage="kontakt"
@@ -21,7 +30,7 @@ import portrait from "../assets/Hebel-Portrait_Mueller_Ausschnitt.jpg";
 
         <div class="w-full flex flex-col text-main grow w-[60%]">
           <h1 class="font-light huge">
-            Kontakt
+            {content.heroTitle}
           </h1>
         </div>
       </div>
@@ -33,12 +42,13 @@ import portrait from "../assets/Hebel-Portrait_Mueller_Ausschnitt.jpg";
 
         <div class="w-full flex flex-col text-main grow w-[60%]">
           <div class="font-serif text-main text-lg leading-relaxed md:text-xl">
-            <p>Dr. Alexander Knopf</p>
-            <p>Theodor-Springmann-Stiftung</p>
-            <p>Hirschgasse 2</p>
-            <p>D – 69120 Heidelberg</p>
-            <p class="mt-6">Tel.: 06221-7258746</p>
-            <p class="mt-6">E-Mail: info@hebel-archiv.de</p>
+            {
+              content.contactGroups.map((group, index) => (
+                <div class={index > 0 ? "mt-6" : undefined}>
+                  {group.map((line) => <p>{line}</p>)}
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>

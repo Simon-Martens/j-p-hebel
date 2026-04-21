@@ -1,5 +1,6 @@
 ---
 import type { ImageMetadata } from "astro";
+import { getCollection } from "astro:content";
 import "../styles/global.css";
 
 interface Props {
@@ -11,13 +12,21 @@ interface Props {
 }
 
 const {
-  title = "Johann Peter Hebel-Archiv",
-  description = "Das Johann Peter Hebel-Archiv präsentiert die historisch-kritische Edition, eine Tagung zu Hebels Briefwerk und die virtuelle Ausstellung „Das Nachleben der Worte“.",
+  title,
+  description,
   pathname = "/",
   image,
   robots = "index, follow",
 } = Astro.props;
 
+const [siteContent] = await getCollection("site");
+
+if (!siteContent) {
+  throw new Error("Missing site content entry.");
+}
+
+const resolvedTitle = title ?? siteContent.data.seoDefaults.title;
+const resolvedDescription = description ?? siteContent.data.seoDefaults.description;
 const canonicalUrl = new URL(pathname, Astro.site);
 const imageSrc = typeof image === "string" ? image : image?.src;
 const socialImageUrl = imageSrc ? new URL(imageSrc, Astro.site).toString() : undefined;
@@ -30,21 +39,21 @@ const socialImageUrl = imageSrc ? new URL(imageSrc, Astro.site).toString() : und
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="shortcut icon" href="/favicon.ico" />
-    <meta name="description" content={description} />
+    <meta name="description" content={resolvedDescription} />
     <meta name="robots" content={robots} />
     <link rel="canonical" href={canonicalUrl} />
     <meta property="og:site_name" content="Johann Peter Hebel-Archiv" />
     <meta property="og:locale" content="de_DE" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:title" content={resolvedTitle} />
+    <meta property="og:description" content={resolvedDescription} />
     <meta property="og:url" content={canonicalUrl} />
     {socialImageUrl && <meta property="og:image" content={socialImageUrl} />}
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:title" content={resolvedTitle} />
+    <meta name="twitter:description" content={resolvedDescription} />
     {socialImageUrl && <meta name="twitter:image" content={socialImageUrl} />}
-    <title>{title}</title>
+    <title>{resolvedTitle}</title>
   </head>
   <body class="min-h-screen bg-paper text-[#1f365c]">
     <slot />

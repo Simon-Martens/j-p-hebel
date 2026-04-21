@@ -1,0 +1,56 @@
+---
+import RichTextRuns from "./RichTextRuns.astro";
+import type { RichTextBlock } from "../lib/content-types";
+
+interface Props {
+  blocks: RichTextBlock[];
+}
+
+const { blocks } = Astro.props;
+---
+
+{
+  blocks.map((block) => {
+    if (block.type === "heading") {
+      return block.level === 2 ? (
+        <h2 class={block.className}>
+          {block.text}
+        </h2>
+      ) : (
+        <h3 class={block.className}>
+          {block.text}
+        </h3>
+      );
+    }
+
+    if (block.type === "paragraph") {
+      return (
+        <p class={block.className}>
+          <RichTextRuns runs={block.runs} />
+        </p>
+      );
+    }
+
+    if (block.type === "lines") {
+      return (
+        <div class={block.className}>
+          {block.lines.map((line) => (
+            <p>
+              <RichTextRuns runs={line} />
+            </p>
+          ))}
+        </div>
+      );
+    }
+
+    return (
+      <ul class={block.className}>
+        {block.items.map((item) => (
+          <li>
+            <RichTextRuns runs={item} />
+          </li>
+        ))}
+      </ul>
+    );
+  })
+}

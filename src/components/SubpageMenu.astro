@@ -1,35 +1,48 @@
 ---
+import { getCollection } from "astro:content";
+
 interface Props {
   currentPage?: "edition" | "tagung" | "ausstellung" | "kontakt" | "datenschutz";
 }
 
 const { currentPage } = Astro.props;
-const base = import.meta.env.BASE_URL;
+const [siteContent] = await getCollection("site");
 
-const items = [
-  { href: `${base}`, label: "Johann Peter Hebel-Archiv", key: "home" },
-  { href: `${base}edition`, label: "Sämtliche Schriften: Historisch-kritische Edition", key: "edition" },
-  { href: `${base}tagung`, label: "Tagung: Neue Zugänge zu Hebels Briefwek", key: "tagung" },
-  { href: `${base}ausstellung`, label: "Virtuelle Ausstellung: Das Nachleben der Worte", key: "ausstellung" },
-];
+if (!siteContent) {
+  throw new Error("Missing site content entry.");
+}
+
+const base = import.meta.env.BASE_URL;
+const toBasePath = (pathname: string) => {
+  if (pathname === "/") {
+    return base;
+  }
+
+  return `${base}${pathname.slice(1)}`;
+};
+
+const items = siteContent.data.nav.items.map((item) => ({
+  ...item,
+  href: toBasePath(item.href),
+}));
 ---
 
-<nav class="subpage-menu pointer-events-none fixed top-4 md:top-6 left-0 z-50 block" aria-label="Seitennavigation">
+<nav class="subpage-menu pointer-events-none fixed top-4 md:top-6 left-0 z-50 block" aria-label={siteContent.data.nav.ariaLabel}>
   <details class="group pointer-events-auto relative inline-block">
     <summary class="subpage-menu__shell flex w-fit list-none items-center font-serif text-main">
       <a
         href={base}
         class="subpage-menu__home flex h-12 w-12 items-center justify-center px-0 py-0 md:w-auto md:gap-3 md:px-4 md:py-3 text-main"
-        aria-label="Zur Startseite"
+        aria-label={siteContent.data.nav.homeAriaLabel}
       >
         <i class="ri-arrow-left-line text-xl" aria-hidden="true"></i>
         <span class="hidden text-[1.05rem] leading-none tracking-[0.02em] lg:block">
-          <span>JPH</span><span class="text-accent">A</span>
+          <span>{siteContent.data.brand.markLeading}</span><span class="text-accent">{siteContent.data.brand.markAccent}</span>
         </span>
       </a>
 
       <span class="subpage-menu__toggle flex h-12 w-12 items-center justify-center border-l border-slate-900/30 px-0 py-0 md:w-auto md:gap-2 md:px-4 md:py-3">
-        <span class="hidden text-[1rem] leading-none lg:block">Menu</span>
+        <span class="hidden text-[1rem] leading-none lg:block">{siteContent.data.nav.menuLabel}</span>
         <i class="ri-menu-line text-lg text-accent" aria-hidden="true"></i>
       </span>
     </summary>
